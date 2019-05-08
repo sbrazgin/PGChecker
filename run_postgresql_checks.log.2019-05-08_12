@@ -1,0 +1,8 @@
+05/08/2019 12:28:34 PM INFO     Started
+05/08/2019 12:32:22 PM INFO     Started
+05/08/2019 12:33:37 PM INFO     Started
+05/08/2019 12:33:37 PM DEBUG    hostName=srv-skfp1-pg01
+05/08/2019 12:33:37 PM DEBUG    portNumber=5432
+05/08/2019 12:33:37 PM DEBUG    database=postgres
+05/08/2019 12:33:37 PM DEBUG    username=postgres
+05/08/2019 12:33:37 PM DEBUG    password=postgresPP33

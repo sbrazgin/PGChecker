@@ -1,0 +1,209 @@
+05/08/2019 02:12:17 PM INFO     Started
+05/08/2019 02:12:17 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 02:12:17 PM DEBUG    portNumber=5432
+05/08/2019 02:12:17 PM DEBUG    database=postgres
+05/08/2019 02:12:17 PM DEBUG    username=pgmonitor
+05/08/2019 02:12:17 PM DEBUG    password=pgmonitor
+05/08/2019 02:41:10 PM INFO     Started
+05/08/2019 02:41:10 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 02:41:10 PM DEBUG    portNumber=5432
+05/08/2019 02:41:10 PM DEBUG    database=postgres
+05/08/2019 02:41:10 PM DEBUG    username=pgmonitor
+05/08/2019 02:41:10 PM DEBUG    password=pgmonitor
+05/08/2019 02:41:26 PM INFO     Started
+05/08/2019 02:41:26 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 02:41:26 PM DEBUG    portNumber=5432
+05/08/2019 02:41:26 PM DEBUG    database=postgres
+05/08/2019 02:41:26 PM DEBUG    username=pgmonitor
+05/08/2019 02:41:26 PM DEBUG    password=pgmonitor
+05/08/2019 02:42:08 PM INFO     Started
+05/08/2019 02:42:08 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 02:42:08 PM DEBUG    portNumber=5432
+05/08/2019 02:42:08 PM DEBUG    database=postgres
+05/08/2019 02:42:08 PM DEBUG    username=pgmonitor
+05/08/2019 02:42:08 PM DEBUG    password=pgmonitor
+05/08/2019 02:42:08 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 02:47:03 PM INFO     Started
+05/08/2019 02:47:03 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 02:47:03 PM DEBUG    portNumber=5432
+05/08/2019 02:47:03 PM DEBUG    database=postgres
+05/08/2019 02:47:03 PM DEBUG    username=pgmonitor
+05/08/2019 02:47:03 PM DEBUG    password=pgmonitor
+05/08/2019 02:47:03 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 02:47:03 PM DEBUG    desc = cache hit ratio
+05/08/2019 02:47:03 PM DEBUG    column = ratio
+05/08/2019 02:47:03 PM DEBUG    ok_min_value = 90
+05/08/2019 02:47:03 PM DEBUG    ok_max_value = 100
+05/08/2019 02:47:03 PM DEBUG    warning_min_value = 80
+05/08/2019 02:47:03 PM DEBUG    warning_max_value = 90
+05/08/2019 02:53:12 PM INFO     Started
+05/08/2019 02:53:12 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 02:53:12 PM DEBUG    portNumber=5432
+05/08/2019 02:53:12 PM DEBUG    database=postgres
+05/08/2019 02:53:12 PM DEBUG    username=pgmonitor
+05/08/2019 02:53:12 PM DEBUG    password=pgmonitor
+05/08/2019 02:53:12 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 02:53:12 PM DEBUG    desc = cache hit ratio
+05/08/2019 02:53:12 PM DEBUG    column = ratio
+05/08/2019 02:53:12 PM DEBUG    ok_min_value = 90
+05/08/2019 02:53:12 PM DEBUG    ok_max_value = 100
+05/08/2019 02:53:12 PM DEBUG    warning_min_value = 80
+05/08/2019 02:53:12 PM DEBUG    warning_max_value = 90
+05/08/2019 02:53:12 PM DEBUG    resultSql=qqq
+05/08/2019 02:54:34 PM INFO     Started
+05/08/2019 02:54:34 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 02:54:34 PM DEBUG    portNumber=5432
+05/08/2019 02:54:34 PM DEBUG    database=postgres
+05/08/2019 02:54:34 PM DEBUG    username=pgmonitor
+05/08/2019 02:54:34 PM DEBUG    password=pgmonitor
+05/08/2019 02:54:34 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 02:54:34 PM DEBUG    desc = cache hit ratio
+05/08/2019 02:54:34 PM DEBUG    column = ratio
+05/08/2019 02:54:34 PM DEBUG    ok_min_value = 90
+05/08/2019 02:54:34 PM DEBUG    ok_max_value = 100
+05/08/2019 02:54:34 PM DEBUG    warning_min_value = 80
+05/08/2019 02:54:34 PM DEBUG    warning_max_value = 90
+05/08/2019 02:55:53 PM INFO     Started
+05/08/2019 02:55:53 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 02:55:53 PM DEBUG    portNumber=5432
+05/08/2019 02:55:53 PM DEBUG    database=postgres
+05/08/2019 02:55:53 PM DEBUG    username=pgmonitor
+05/08/2019 02:55:53 PM DEBUG    password=pgmonitor
+05/08/2019 02:55:53 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 02:55:53 PM DEBUG    desc = cache hit ratio
+05/08/2019 02:55:53 PM DEBUG    column = ratio
+05/08/2019 02:55:53 PM DEBUG    ok_min_value = 90
+05/08/2019 02:55:53 PM DEBUG    ok_max_value = 100
+05/08/2019 02:55:53 PM DEBUG    warning_min_value = 80
+05/08/2019 02:55:53 PM DEBUG    warning_max_value = 90
+05/08/2019 02:57:39 PM INFO     Started
+05/08/2019 02:57:39 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 02:57:39 PM DEBUG    portNumber=5432
+05/08/2019 02:57:39 PM DEBUG    database=postgres
+05/08/2019 02:57:39 PM DEBUG    username=pgmonitor
+05/08/2019 02:57:39 PM DEBUG    password=pgmonitor
+05/08/2019 02:57:39 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 02:57:39 PM DEBUG    desc = cache hit ratio
+05/08/2019 02:57:39 PM DEBUG    column = ratio
+05/08/2019 02:57:39 PM DEBUG    ok_min_value = 90
+05/08/2019 02:57:39 PM DEBUG    ok_max_value = 100
+05/08/2019 02:57:39 PM DEBUG    warning_min_value = 80
+05/08/2019 02:57:39 PM DEBUG    warning_max_value = 90
+05/08/2019 02:57:39 PM DEBUG    resultSql=?
+05/08/2019 03:04:09 PM INFO     Started
+05/08/2019 03:04:09 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 03:04:09 PM DEBUG    portNumber=5432
+05/08/2019 03:04:09 PM DEBUG    database=postgres
+05/08/2019 03:04:09 PM DEBUG    username=pgmonitor
+05/08/2019 03:04:09 PM DEBUG    password=pgmonitor
+05/08/2019 03:04:09 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 03:04:09 PM DEBUG    desc = cache hit ratio
+05/08/2019 03:04:09 PM DEBUG    column = ratio
+05/08/2019 03:04:09 PM DEBUG    ok_min_value = 90
+05/08/2019 03:04:09 PM DEBUG    ok_max_value = 100
+05/08/2019 03:04:09 PM DEBUG    warning_min_value = 80
+05/08/2019 03:04:09 PM DEBUG    warning_max_value = 90
+05/08/2019 03:04:32 PM INFO     Started
+05/08/2019 03:04:32 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 03:04:32 PM DEBUG    portNumber=5432
+05/08/2019 03:04:32 PM DEBUG    database=postgres
+05/08/2019 03:04:32 PM DEBUG    username=pgmonitor
+05/08/2019 03:04:32 PM DEBUG    password=pgmonitor
+05/08/2019 03:04:32 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 03:04:32 PM DEBUG    desc = cache hit ratio
+05/08/2019 03:04:32 PM DEBUG    column = ratio
+05/08/2019 03:04:32 PM DEBUG    ok_min_value = 90
+05/08/2019 03:04:32 PM DEBUG    ok_max_value = 100
+05/08/2019 03:04:32 PM DEBUG    warning_min_value = 80
+05/08/2019 03:04:32 PM DEBUG    warning_max_value = 90
+05/08/2019 03:17:42 PM INFO     Started
+05/08/2019 03:17:42 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 03:17:42 PM DEBUG    portNumber=5432
+05/08/2019 03:17:42 PM DEBUG    database=postgres
+05/08/2019 03:17:42 PM DEBUG    username=pgmonitor
+05/08/2019 03:17:42 PM DEBUG    password=pgmonitor
+05/08/2019 03:17:42 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 03:17:42 PM DEBUG    desc = cache hit ratio
+05/08/2019 03:17:42 PM DEBUG    column = ratio
+05/08/2019 03:17:42 PM DEBUG    ok_min_value = 90
+05/08/2019 03:17:42 PM DEBUG    ok_max_value = 100
+05/08/2019 03:17:42 PM DEBUG    warning_min_value = 80
+05/08/2019 03:17:42 PM DEBUG    warning_max_value = 90
+05/08/2019 03:19:11 PM INFO     Started
+05/08/2019 03:19:11 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 03:19:11 PM DEBUG    portNumber=5432
+05/08/2019 03:19:11 PM DEBUG    database=postgres
+05/08/2019 03:19:11 PM DEBUG    username=pgmonitor
+05/08/2019 03:19:11 PM DEBUG    password=pgmonitor
+05/08/2019 03:19:11 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 03:19:11 PM DEBUG    desc = cache hit ratio
+05/08/2019 03:19:11 PM DEBUG    column = ratio
+05/08/2019 03:19:11 PM DEBUG    ok_min_value = 90
+05/08/2019 03:19:11 PM DEBUG    ok_max_value = 100
+05/08/2019 03:19:11 PM DEBUG    warning_min_value = 80
+05/08/2019 03:19:11 PM DEBUG    warning_max_value = 90
+05/08/2019 03:19:33 PM INFO     Started
+05/08/2019 03:19:33 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 03:19:33 PM DEBUG    portNumber=5432
+05/08/2019 03:19:33 PM DEBUG    database=postgres
+05/08/2019 03:19:33 PM DEBUG    username=pgmonitor
+05/08/2019 03:19:33 PM DEBUG    password=pgmonitor
+05/08/2019 03:19:33 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 03:19:33 PM DEBUG    desc = cache hit ratio
+05/08/2019 03:19:33 PM DEBUG    column = ratio
+05/08/2019 03:19:33 PM DEBUG    ok_min_value = 90
+05/08/2019 03:19:33 PM DEBUG    ok_max_value = 100
+05/08/2019 03:19:33 PM DEBUG    warning_min_value = 80
+05/08/2019 03:19:33 PM DEBUG    warning_max_value = 90
+05/08/2019 03:19:33 PM DEBUG    resultSql=0.9778395949240483
+05/08/2019 03:20:38 PM INFO     Started
+05/08/2019 03:20:38 PM DEBUG    hostName=srv-tnormap1-pg01
+05/08/2019 03:20:38 PM DEBUG    portNumber=5432
+05/08/2019 03:20:38 PM DEBUG    database=postgres
+05/08/2019 03:20:38 PM DEBUG    username=pgmonitor
+05/08/2019 03:20:38 PM DEBUG    password=pgmonitor
+05/08/2019 03:20:39 PM DEBUG    sqlText = SELECT
+sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
+FROM
+pg_statio_user_tables;
+05/08/2019 03:20:39 PM DEBUG    desc = cache hit ratio
+05/08/2019 03:20:39 PM DEBUG    column = ratio
+05/08/2019 03:20:39 PM DEBUG    ok_min_value = 90
+05/08/2019 03:20:39 PM DEBUG    ok_max_value = 100
+05/08/2019 03:20:39 PM DEBUG    warning_min_value = 80
+05/08/2019 03:20:39 PM DEBUG    warning_max_value = 90
+05/08/2019 03:20:39 PM DEBUG    result=0.9778395949240483
+05/08/2019 03:20:39 PM DEBUG    resultSql=0.9778395949240483
