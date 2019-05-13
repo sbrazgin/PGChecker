@@ -11,3 +11,9 @@ GRANT SELECT ON ALL TABLES IN SCHEMA public TO pgmonitor;
 
 host    postgres        pgmonitor       all                     md5
 
+3) reload
+
+4) check login:
+ psql -d postgres -U pgmonitor
+ 
+ 

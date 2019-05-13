@@ -6,49 +6,108 @@
 import logging
 import logging.config
 import sys
+import glob
+import configparser
+
 from db_connect import DBconnect
 from db_check import DBcheck
 
-def one_check(db1,check1):
-    resultSql = db1.runSql(check1.sqlText)
-    logger.debug("resultSql="+str(resultSql))
-    check1.checkValue(resultSql)
 
 # -----------------------------------------------------------------------------------
 # MAIN proc
 def main(argv):
-    global logger
+    global g_logger
+    global g_list_db
+    global g_list_check
+    global g_out_text_file
+
+    # -----------------------------------------------------------------------------------
+    def one_check(db1, check1):
+        global g_logger
+        global g_out_text_file
+
+        if check1.type == 'info':
+            # print all table to out
+            result_sql_value = db1.runSqlTable(check1.sqlText)
+            for str1 in result_sql_value:
+                g_logger.debug(str1)
+                g_out_text_file.writelines(str1+"\r")
+
+
+        if check1.type == 'check_float':
+            # check and print one value
+            result_sql_value = db1.runSqlFloat(check1.sqlText)
+            g_logger.debug("resultSql = " + str(result_sql_value))
+            result_check_value = check1.checkFloatValue(result_sql_value)
+
+            str1 = 'Check: "'+result_check_value[0] +'" Result:'+ str(result_check_value[1]) +' '+ result_check_value[2]
+
+            g_logger.debug(str1)
+            g_out_text_file.writelines(str1+"\r")
+
+    # -----------------------------------------------------------------------------------
+    # load list of database connects
+    def load_db_connects():
+        global g_list_db
+        g_list_db = []
+
+        # os.chdir("/mydir")
+        for file in glob.glob("db*.ini"):
+            g_logger.debug('db ini file = ' + file)
+            # print(file)
+
+            db_connect = DBconnect(file, g_logger)
+            db_connect.connect()
+            if db_connect.is_connect():
+                g_list_db.append(db_connect)
+
+    # -----------------------------------------------------------------------------------
+    # load list of checks
+    def load_db_checks():
+        global g_list_check
+        g_list_check = []
+        db_check = DBcheck('check_1.ini', g_logger)
+        g_list_check.append(db_check)
 
     # -------------------
     # create logger
     logging.config.fileConfig('logging.conf')
-    logger = logging.getLogger()
-    logger.info('Started')
+    g_logger = logging.getLogger()
+    g_logger.info('Started')
 
     # -------------------
     # read input params
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    out_file = config['REPORT']['log_file']
+    g_logger.info('out_file = '+out_file)
+    g_out_text_file = open(out_file, "w")
 
     # -------------------
-    list_db = []
-    db_connect = DBconnect('db_1.ini',logger)
-    db_connect.connect()
-    list_db.append(db_connect)
-
+    # read list of databases, connect
+    load_db_connects()
 
     # -------------------
-    list_check = []
-    db_check = DBcheck('check_1.ini',logger)
-    list_check.append(db_check)
+    # read list of checks
+    load_db_checks()
 
     # -------------------
-    for db1 in list_db:
-        for check1 in list_check:
+    # run checks
+    for db1 in g_list_db:
+        g_out_text_file.write('----------------------------------------------'+"\r")
+        g_out_text_file.write('Database: '+db1.getDescDatabase()+"\r")
+        for check1 in g_list_check:
             one_check(db1,check1)
 
     # -------------------
-    for db1 in list_db:
+    # close connections
+    for db1 in g_list_db:
         db1.close()
 
+    # -------------------
+    g_out_text_file.close()
+
+# -----------------------------------------------------------------------------------
 if __name__ == "__main__":
     print(sys.argv)
     main(sys.argv[1:])
