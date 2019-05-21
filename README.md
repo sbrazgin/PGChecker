@@ -1,19 +1,53 @@
 Easy PostgreSql databases status checker
 
-1) create user:
-
-CREATE USER pgmonitor WITH PASSWORD 'pgmonitor' CONNECTION LIMIT 2;
+1) create PostgreSql user:
+1.1)
+CREATE USER pgmonitor WITH PASSWORD '......' CONNECTION LIMIT 2;
 REVOKE ALL ON SCHEMA public FROM pgmonitor;
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO pgmonitor;
 
-
-2) add to pg_hba:
+1.2) add to pg_hba:
 
 host    postgres        pgmonitor       all                     md5
 
-3) reload
+1.3) reload
 
-4) check login:
+1.4) check login:
  psql -d postgres -U pgmonitor
+ 
+2) add db...ini file
+
+3) Example out check file:
+
+
+=====================================================================================
+== Database: hostName=srv-.....-pg01, portNumber=5432, database=......
+=====================================================================================
+ 
+-------------------------------------------------------
+-- cache hit ratio
+-------------------------------------------------------
+Value : 0.99 OK
+ 
+-------------------------------------------------------
+-- session count info
+-------------------------------------------------------
+ehdapi2              NULL                       4
+pgmonitor            active                     1
+postgres             NULL                       1
+NULL                 NULL                       4
+ 
+-------------------------------------------------------
+-- Size of all databases
+-------------------------------------------------------
+database_name        | size_in_mb          
+-------------        | ---------           
+postgres             |         17          
+template1            |          7          
+template0            |          7          
+template_postgis     |         14          
+ehdapi2              |         19          
+ 
+
  
  
