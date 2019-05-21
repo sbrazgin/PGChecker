@@ -1,93 +1,171 @@
-05/08/2019 05:28:22 PM INFO     Started
-05/08/2019 05:28:22 PM DEBUG    hostName=srv-tnormap1-pg01
-05/08/2019 05:28:22 PM DEBUG    portNumber=5432
-05/08/2019 05:28:22 PM DEBUG    database=postgres
-05/08/2019 05:28:22 PM DEBUG    username=pgmonitor
-05/08/2019 05:28:22 PM DEBUG    password=pgmonitor
-05/08/2019 05:28:23 PM DEBUG    sqlText = SELECT
+05/21/2019 02:09:27 PM INFO     Started
+05/21/2019 02:09:27 PM INFO     out_file = c:\d\PGCheker.out
+05/21/2019 02:09:27 PM DEBUG    db ini file = db_1.ini
+05/21/2019 02:09:27 PM DEBUG    hostName=srv-tnormap1-pg01
+05/21/2019 02:09:27 PM DEBUG    portNumber=5432
+05/21/2019 02:09:27 PM DEBUG    database=ehdapi2
+05/21/2019 02:09:27 PM DEBUG    username=pgmonitor
+05/21/2019 02:09:27 PM DEBUG    password=pgmonitor
+05/21/2019 02:09:27 PM DEBUG    Connected!
+05/21/2019 02:09:27 PM DEBUG    db ini file = db_2_supd_1.ini
+05/21/2019 02:09:27 PM DEBUG    hostName=srv-supdp2-pg01st
+05/21/2019 02:09:27 PM DEBUG    portNumber=5432
+05/21/2019 02:09:27 PM DEBUG    database=gdoc
+05/21/2019 02:09:27 PM DEBUG    username=pgmonitor
+05/21/2019 02:09:27 PM DEBUG    password=pgmonitor
+05/21/2019 02:09:27 PM DEBUG    Connected!
+05/21/2019 02:09:27 PM DEBUG    db ini file = db_3_sm_arm04.ini
+05/21/2019 02:09:27 PM DEBUG    hostName=srv-sm-arm04
+05/21/2019 02:09:27 PM DEBUG    portNumber=5432
+05/21/2019 02:09:27 PM DEBUG    database=susemanager
+05/21/2019 02:09:27 PM DEBUG    username=pgmonitor
+05/21/2019 02:09:27 PM DEBUG    password=pgmonitor
+05/21/2019 02:09:27 PM DEBUG    Connected!
+05/21/2019 02:09:27 PM DEBUG    check ini file = check_1.ini
+05/21/2019 02:09:27 PM DEBUG    sqlText = SELECT
 sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
 FROM
 pg_statio_user_tables;
-05/08/2019 05:28:23 PM DEBUG    desc = cache hit ratio
-05/08/2019 05:28:23 PM DEBUG    column = ratio
-05/08/2019 05:28:23 PM DEBUG    ok_min_value = 90
-05/08/2019 05:28:23 PM DEBUG    ok_max_value = 100
-05/08/2019 05:28:23 PM DEBUG    warning_min_value = 80
-05/08/2019 05:28:23 PM DEBUG    warning_max_value = 90
-05/08/2019 05:28:23 PM DEBUG    result=0.9778395949240483
-05/08/2019 05:28:23 PM DEBUG    resultSql=0.9778395949240483
-05/08/2019 05:28:56 PM INFO     Started
-05/08/2019 05:28:56 PM DEBUG    hostName=srv-tnormap1-pg01
-05/08/2019 05:28:56 PM DEBUG    portNumber=5432
-05/08/2019 05:28:56 PM DEBUG    database=postgres
-05/08/2019 05:28:56 PM DEBUG    username=pgmonitor
-05/08/2019 05:28:56 PM DEBUG    password=pgmonitor
-05/08/2019 05:28:56 PM DEBUG    sqlText = SELECT
-sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
-FROM
-pg_statio_user_tables;
-05/08/2019 05:28:56 PM DEBUG    desc = cache hit ratio
-05/08/2019 05:28:56 PM DEBUG    column = ratio
-05/08/2019 05:28:56 PM DEBUG    ok_min_value = 90
-05/08/2019 05:28:56 PM DEBUG    ok_max_value = 100
-05/08/2019 05:28:56 PM DEBUG    warning_min_value = 80
-05/08/2019 05:28:56 PM DEBUG    warning_max_value = 90
-05/08/2019 05:28:56 PM DEBUG    result=0.9778395949240483
-05/08/2019 05:28:56 PM DEBUG    resultSql=0.9778395949240483
-05/08/2019 05:28:56 PM INFO     cache hit ratio Error
-05/08/2019 05:29:52 PM INFO     Started
-05/08/2019 05:29:52 PM DEBUG    hostName=srv-tnormap1-pg01
-05/08/2019 05:29:52 PM DEBUG    portNumber=5432
-05/08/2019 05:29:52 PM DEBUG    database=postgres
-05/08/2019 05:29:52 PM DEBUG    username=pgmonitor
-05/08/2019 05:29:52 PM DEBUG    password=pgmonitor
-05/08/2019 05:29:52 PM DEBUG    sqlText = SELECT
-sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
-FROM
-pg_statio_user_tables;
-05/08/2019 05:29:52 PM DEBUG    desc = cache hit ratio
-05/08/2019 05:29:52 PM DEBUG    column = ratio
-05/08/2019 05:29:52 PM DEBUG    ok_min_value = 90
-05/08/2019 05:29:52 PM DEBUG    ok_max_value = 100
-05/08/2019 05:29:52 PM DEBUG    warning_min_value = 80
-05/08/2019 05:29:52 PM DEBUG    warning_max_value = 90
-05/08/2019 05:29:52 PM DEBUG    result=0.9778395949240483
-05/08/2019 05:29:52 PM DEBUG    resultSql=0.9778395949240483
-05/08/2019 05:29:52 PM INFO     cache hit ratio Error Value=0.9778395949240483
-05/08/2019 05:30:12 PM INFO     Started
-05/08/2019 05:30:12 PM DEBUG    hostName=srv-tnormap1-pg01
-05/08/2019 05:30:12 PM DEBUG    portNumber=5432
-05/08/2019 05:30:12 PM DEBUG    database=postgres
-05/08/2019 05:30:12 PM DEBUG    username=pgmonitor
-05/08/2019 05:30:12 PM DEBUG    password=pgmonitor
-05/08/2019 05:30:12 PM DEBUG    sqlText = SELECT
-sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
-FROM
-pg_statio_user_tables;
-05/08/2019 05:30:12 PM DEBUG    desc = cache hit ratio
-05/08/2019 05:30:12 PM DEBUG    column = ratio
-05/08/2019 05:30:12 PM DEBUG    ok_min_value = 0.90
-05/08/2019 05:30:12 PM DEBUG    ok_max_value = 1
-05/08/2019 05:30:12 PM DEBUG    warning_min_value = 0.80
-05/08/2019 05:30:12 PM DEBUG    warning_max_value = 0.90
-05/08/2019 05:30:12 PM DEBUG    result=0.9778395949240483
-05/08/2019 05:30:12 PM DEBUG    resultSql=0.9778395949240483
-05/08/2019 05:30:36 PM INFO     Started
-05/08/2019 05:30:36 PM DEBUG    hostName=srv-tnormap1-pg01
-05/08/2019 05:30:36 PM DEBUG    portNumber=5432
-05/08/2019 05:30:36 PM DEBUG    database=postgres
-05/08/2019 05:30:36 PM DEBUG    username=pgmonitor
-05/08/2019 05:30:36 PM DEBUG    password=pgmonitor
-05/08/2019 05:30:36 PM DEBUG    sqlText = SELECT
-sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) as ratio
-FROM
-pg_statio_user_tables;
-05/08/2019 05:30:36 PM DEBUG    desc = cache hit ratio
-05/08/2019 05:30:36 PM DEBUG    column = ratio
-05/08/2019 05:30:36 PM DEBUG    ok_min_value = 0.90
-05/08/2019 05:30:36 PM DEBUG    ok_max_value = 1
-05/08/2019 05:30:36 PM DEBUG    warning_min_value = 0.80
-05/08/2019 05:30:36 PM DEBUG    warning_max_value = 0.90
-05/08/2019 05:30:36 PM DEBUG    result=0.9778395949240483
-05/08/2019 05:30:36 PM DEBUG    resultSql=0.9778395949240483
-05/08/2019 05:30:36 PM INFO     cache hit ratio OK
+05/21/2019 02:09:27 PM DEBUG    desc = cache hit ratio
+05/21/2019 02:09:27 PM DEBUG    type = check_float
+05/21/2019 02:09:27 PM DEBUG    column = ratio
+05/21/2019 02:09:27 PM DEBUG    ok_min_value = 0.90
+05/21/2019 02:09:27 PM DEBUG    ok_max_value = 1
+05/21/2019 02:09:27 PM DEBUG    warning_min_value = 0.80
+05/21/2019 02:09:27 PM DEBUG    warning_max_value = 0.90
+05/21/2019 02:09:27 PM DEBUG    check ini file = check_2_session_cnt.ini
+05/21/2019 02:09:27 PM DEBUG    sqlText = SELECT rpad(coalesce(usename,'NULL'),20)||' '|| rpad(coalesce(state,'NULL'),25) ||'  ' ||  count(*) as RESULT
+FROM  pg_stat_activity
+GROUP BY usename,  state
+ORDER BY usename,  state ;
+05/21/2019 02:09:27 PM DEBUG    desc = session count info
+05/21/2019 02:09:27 PM DEBUG    type = info
+05/21/2019 02:09:27 PM DEBUG    check ini file = check_3_size.ini
+05/21/2019 02:09:27 PM DEBUG    sqlText = select rpad('database_name',20) ||' | '|| rpad('size_in_mb',20)  AS RESULT
+union all
+select rpad('-------------',20) ||' | '|| rpad('---------',20)  AS RESULT
+union all
+SELECT rpad(pg_database.datname,20)||' | '|| rpad( to_char( pg_database_size(pg_database.datname)/1024/1024,'999999999') ,20) AS RESULT
+FROM pg_database;
+05/21/2019 02:09:27 PM DEBUG    desc = Size of all databases
+05/21/2019 02:09:27 PM DEBUG    type = info
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: =====================================================================================
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: == Database: hostName=srv-tnormap1-pg01, portNumber=5432, database=ehdapi2
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: =====================================================================================
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -- cache hit ratio
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    result=0.9999282322255705
+05/21/2019 02:09:27 PM DEBUG    resultSql = 0.9999282322255705
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: Value : 0.9999282322255705 OK
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -- session count info
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    result next string=ehdapi2              NULL                       4
+05/21/2019 02:09:27 PM DEBUG    result next string=pgmonitor            active                     1
+05/21/2019 02:09:27 PM DEBUG    result next string=postgres             NULL                       1
+05/21/2019 02:09:27 PM DEBUG    result next string=NULL                 NULL                       4
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: ehdapi2              NULL                       4
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: pgmonitor            active                     1
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: postgres             NULL                       1
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: NULL                 NULL                       4
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -- Size of all databases
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    result next string=database_name        | size_in_mb          
+05/21/2019 02:09:27 PM DEBUG    result next string=-------------        | ---------           
+05/21/2019 02:09:27 PM DEBUG    result next string=postgres             |         17          
+05/21/2019 02:09:27 PM DEBUG    result next string=template1            |          7          
+05/21/2019 02:09:27 PM DEBUG    result next string=template0            |          7          
+05/21/2019 02:09:27 PM DEBUG    result next string=template_postgis     |         14          
+05/21/2019 02:09:27 PM DEBUG    result next string=ehdapi2              |         19          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: database_name        | size_in_mb          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------        | ---------           
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: postgres             |         17          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: template1            |          7          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: template0            |          7          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: template_postgis     |         14          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: ehdapi2              |         19          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: =====================================================================================
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: == Database: hostName=srv-supdp2-pg01st, portNumber=5432, database=gdoc
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: =====================================================================================
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -- cache hit ratio
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    result=0.9744625378331567
+05/21/2019 02:09:27 PM DEBUG    resultSql = 0.9744625378331567
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: Value : 0.9744625378331567 OK
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -- session count info
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    result next string=gdoc                 NULL                       147
+05/21/2019 02:09:27 PM DEBUG    result next string=pgmonitor            active                     1
+05/21/2019 02:09:27 PM DEBUG    result next string=postgres             NULL                       1
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: gdoc                 NULL                       147
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: pgmonitor            active                     1
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: postgres             NULL                       1
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -- Size of all databases
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    result next string=database_name        | size_in_mb          
+05/21/2019 02:09:27 PM DEBUG    result next string=-------------        | ---------           
+05/21/2019 02:09:27 PM DEBUG    result next string=postgres             |          7          
+05/21/2019 02:09:27 PM DEBUG    result next string=template1            |          6          
+05/21/2019 02:09:27 PM DEBUG    result next string=template0            |          6          
+05/21/2019 02:09:27 PM DEBUG    result next string=test                 |          7          
+05/21/2019 02:09:27 PM DEBUG    result next string=gdoc                 |      74532          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: database_name        | size_in_mb          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------        | ---------           
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: postgres             |          7          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: template1            |          6          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: template0            |          6          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: test                 |          7          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: gdoc                 |      74532          
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: =====================================================================================
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: == Database: hostName=srv-sm-arm04, portNumber=5432, database=susemanager
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: =====================================================================================
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -- cache hit ratio
+05/21/2019 02:09:27 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:28 PM DEBUG    result=0.999667399676651
+05/21/2019 02:09:28 PM DEBUG    resultSql = 0.999667399676651
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: Value : 0.999667399676651 OK
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: -- session count info
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:28 PM DEBUG    result next string=pgmonitor            active                     1
+05/21/2019 02:09:28 PM DEBUG    result next string=postgres             NULL                       3
+05/21/2019 02:09:28 PM DEBUG    result next string=susemanager          NULL                       37
+05/21/2019 02:09:28 PM DEBUG    result next string=NULL                 NULL                       7
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: pgmonitor            active                     1
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: postgres             NULL                       3
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: susemanager          NULL                       37
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: NULL                 NULL                       7
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG:  
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: -- Size of all databases
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: -------------------------------------------------------
+05/21/2019 02:09:28 PM DEBUG    result next string=database_name        | size_in_mb          
+05/21/2019 02:09:28 PM DEBUG    result next string=-------------        | ---------           
+05/21/2019 02:09:28 PM DEBUG    result next string=postgres             |          7          
+05/21/2019 02:09:28 PM DEBUG    result next string=template1            |          7          
+05/21/2019 02:09:28 PM DEBUG    result next string=template0            |          7          
+05/21/2019 02:09:28 PM DEBUG    result next string=susemanager          |      68945          
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: database_name        | size_in_mb          
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: -------------        | ---------           
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: postgres             |          7          
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: template1            |          7          
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: template0            |          7          
+05/21/2019 02:09:28 PM DEBUG    WRITE TO OUT LOG: susemanager          |      68945          
