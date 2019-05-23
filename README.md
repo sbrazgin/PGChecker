@@ -5,6 +5,16 @@ Easy PostgreSql databases status checker
 CREATE USER pgmonitor WITH PASSWORD '......' CONNECTION LIMIT 2;
 REVOKE ALL ON SCHEMA public FROM pgmonitor;
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO pgmonitor;
+grant select on pg_stat_replication to pgmonitor;
+
+
+CREATE FUNCTION func_stat_replication() RETURNS SETOF pg_stat_replication as
+$$ select * from pg_stat_replication; $$
+LANGUAGE sql SECURITY DEFINER;
+
+REVOKE EXECUTE ON FUNCTION func_stat_replication() FROM public;
+GRANT EXECUTE ON FUNCTION func_stat_replication() to pgmonitor;
+
 
 1.2) add to pg_hba:
 
