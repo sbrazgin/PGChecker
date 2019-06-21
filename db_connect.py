@@ -1,68 +1,57 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""  Sergey Brazgin 05/2019
+  sbrazgin@mail.ru
+  Simple PostgreSql check
+"""
+
 import psycopg2
 import configparser
 from typing import List
 
 
-
-class DBconnect(object):
+class DbConnect(object):
 
     DEFAULT_ROLE = 'standalone'
+    DEFAULT_VERSION = 0
+
     # -----------------------------------------------------------------------------------
-    def __init__(self, nameParamFile: str, logger):
-        self._nameParamFile = nameParamFile
+    def __init__(self, file_name: str, logger):
+        self._nameParamFile = file_name
         self._logger = logger
 
         self._is_connected = False
         self._error_desc = ""
 
-        self.version = 0
-        self.role = DBconnect.DEFAULT_ROLE
+        self._version = DbConnect.DEFAULT_VERSION
+        self._role = DbConnect.DEFAULT_ROLE
 
-        self.__readParamFile__()
-
-    # -----------------------------------------------------------------------------------
-    def __readParamFile__(self) -> None:
         config = configparser.ConfigParser()
         config.read(self._nameParamFile)
 
         # mandatory
-        self._hostName   = config['DB']['hostName']
+        self._hostName = config['DB']['hostName']
         self._portNumber = config['DB']['portNumber']
         self._database = config['DB']['database']
         self._username = config['DB']['username']
         self._password = config['DB']['password']
 
-
         # optional
         if 'DB_OPTIONS' in config.sections():
             opt_par = config['DB_OPTIONS']
-            self.version = int(opt_par.get('version', 0))
-            self.role = opt_par.get('role', 'unknown')
+            self._version = int(opt_par.get('version', 0))
+            self._role = opt_par.get('role', 'unknown')
 
         # debug info
-        self._logger.debug("hostName=" + self._hostName)
-        self._logger.debug("portNumber=" + self._portNumber)
-        self._logger.debug("database=" + self._database)
-        self._logger.debug("username=" + self._username)
-        self._logger.debug("password=" + self._password)
-        self._logger.debug("version=" + str(self.version))
-        self._logger.debug("role=" + self.role)
+        self._logger.debug("DB par load: host=" + self._hostName +
+                           ", port=" + self._portNumber +
+                           ", database=" + self._database +
+                           ", username=" + self._username +
+                           ", password=" + self._password +
+                           ", version=" + str(self.version) +
+                           ", role=" + self._role)
 
-    # -----------------------------------------------------------------------------------
-    def getDescDatabase(self) -> str:
-        return f'host={self._hostName}, port={self._portNumber}, database={self._database}, role={self.role}'
-
-    # -----------------------------------------------------------------------------------
-    def getDescDatabase2(self) -> str:
-        return self.getDescDatabase() + ', user=' + self._username + ', password=' + self._password
-
-    # -----------------------------------------------------------------------------------
-    def getError(self) -> str:
-        return self._error_desc
-
-    # -----------------------------------------------------------------------------------
-    def connect(self) -> None:
-        self._is_connected = False
         try:
             self.conn = psycopg2.connect(dbname=self._database,
                                          user=self._username,
@@ -73,14 +62,35 @@ class DBconnect(object):
             self._logger.error('---------------------------------------')
             self._logger.error("Unable to connect! ")
             self._logger.error(self._error_desc)
-            self._logger.error('Params to connect: ' + self.getDescDatabase2())
+            self._logger.error('Params to connect: ' + self.desc_ext)
             self._logger.error('---------------------------------------')
         else:
             self._logger.debug("Connected!")
             self._is_connected = True
 
-    # -----------------------------------------------------------------------------------
-    def is_connect(self) -> bool:
+    # -- public -------------------------------------------------------------------------
+    @property
+    def version(self):
+        return self._version
+
+    @property
+    def role(self):
+        return self._role
+
+    @property
+    def desc(self):
+        return f'host={self._hostName}, port={self._portNumber}, database={self._database}, role={self._role}'
+
+    @property
+    def desc_ext(self):
+        return self.desc + ', user=' + self._username + ', password=' + self._password
+
+    @property
+    def error_desc(self):
+        return self._error_desc
+
+    @property
+    def is_connect(self):
         return self._is_connected
 
     # -----------------------------------------------------------------------------------
@@ -88,10 +98,10 @@ class DBconnect(object):
         self.conn.close()
 
     # -----------------------------------------------------------------------------------
-    def runSqlFloat(self, sqlText: str) -> float:
+    def run_sql_float(self, sql_text: str) -> float:
         cursor = self.conn.cursor()
 
-        cursor.execute(sqlText)
+        cursor.execute(sql_text)
         records = cursor.fetchall()
 
         result = 0.0
@@ -103,13 +113,13 @@ class DBconnect(object):
         return result
 
     # -----------------------------------------------------------------------------------
-    def runSqlInt(self, sqlText: str) -> int:
+    def run_sql_int(self, sql_text: str) -> int:
         cursor = self.conn.cursor()
 
-        cursor.execute(sqlText)
+        cursor.execute(sql_text)
         records = cursor.fetchall()
 
-        result = 0.0
+        result = 0
         for row in records:
             result = int(row[0])
             self._logger.debug("result=" + str(result))
@@ -118,10 +128,10 @@ class DBconnect(object):
         return result
 
     # -----------------------------------------------------------------------------------
-    def runSqlStr(self, sqlText: str) -> str:
+    def run_sql_str(self, sql_text: str) -> str:
         cursor = self.conn.cursor()
 
-        cursor.execute(sqlText)
+        cursor.execute(sql_text)
         records = cursor.fetchall()
 
         result = ''
@@ -133,10 +143,10 @@ class DBconnect(object):
         return result
 
     # -----------------------------------------------------------------------------------
-    def runSqlTable(self, sqlText: str) -> List:
+    def run_sql_table(self, sql_text: str) -> List:
         cursor = self.conn.cursor()
 
-        cursor.execute(sqlText)
+        cursor.execute(sql_text)
         records = cursor.fetchall()
         result = []
         for row in records:
